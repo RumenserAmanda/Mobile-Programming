@@ -142,3 +142,5 @@ function funcNo5(inp) {
     num++;
     return console.log(num + " - " + inp);
 }
+
+//second commit
