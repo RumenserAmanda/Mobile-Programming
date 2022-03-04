@@ -22,15 +22,17 @@ export default function App() {
       bio: 'i like banana.',
       age: 21,
     },
-    nni_p_nama : {
-      bio_ato_apa_kek_terserah: 'dpe isi',
+    Friendly : {
+      name: 'Friendly',
+      bio: 'I like to think that i could die at any moment',
+      age: 20,
     }
   });
 
   return (
     <View>
       <Gilbeh props={state.gilby}/>
-      <Friendlyyyy />
+      <Friendlyyyy props={state.Friendly} />
       <Carlodinoooo />
       <Inces/>
       <Poco/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 
 const styles = StyleSheet.create({
     View: {
@@ -9,14 +9,14 @@ const styles = StyleSheet.create({
         padding: 5,
     },
     Text: {
-        color: 'green',
+        color: 'greenyellow',
     }
 });
 
-export default function Friendlyyyy() {
+export default function Friendlyyyy({props}) {
     return(
         <View style={styles.View}>
-            <Text style={styles.Text}>Friendlyyyy</Text>
+            <Text style={styles.Text}>My name is {props.name} and i'm  {props.age}. {props.bio}</Text>
         </View>
     );
 }
