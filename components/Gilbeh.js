@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -14,30 +14,9 @@ const styles = StyleSheet.create({
 });
 
 export default function Gilbeh({props}) {
-    const [state, setState] = useState({
-        text: "My name is gilbeeeeeh.",
-        textShow: true,
-    });
-
-    const buttonPress = () => {
-        if(state.textShow) {
-            setState({
-                text: 'hidden.',
-                textShow: false,
-            });
-        }
-        else {
-            setState({
-                text: 'My name is gilbeeeeeh',
-                textShow: true,
-            });
-        }
-    }
-
     return(
         <View style={styles.View}>
-            <Text style={styles.Text}>My name is {state.text} and my age is {props.age}. {props.bio}</Text>
-            <Button title={(state.textShow) ? 'Hide' : 'Show'} onPress={buttonPress} />
+            <Text style={styles.Text}>My name is {props.name} and i'm  {props.age}. {props.bio}</Text>
         </View>
     );
 }
