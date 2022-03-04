@@ -13,10 +13,10 @@ const styles = StyleSheet.create({
     }
 });
 
-export default function Poco() {
+export default function Poco({props}) {
     return(
         <View style={styles.View}>
-            <Text style={styles.Text}>Pocox</Text>
+            <Text style={styles.Text}>My name is {props.name} and i'm  {props.age}. {props.bio}</Text>
         </View>
     );
 }

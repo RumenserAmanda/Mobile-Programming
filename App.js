@@ -26,6 +26,11 @@ export default function App() {
       name: 'Friendly',
       bio: 'I like to think that i could die at any moment',
       age: 20,
+    },
+    Poco : {
+      name: ' Poco'
+      bio: ' My Favorite color is Blue',
+      age: 21,
     }
   });
 
@@ -35,7 +40,7 @@ export default function App() {
       <Friendlyyyy props={state.Friendly} />
       <Carlodinoooo />
       <Inces/>
-      <Poco/>
+      <Poco props={state.Poco}/>
     </View>
   );
 }
