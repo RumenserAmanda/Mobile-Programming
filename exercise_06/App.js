@@ -33,7 +33,7 @@ export default function App() {
       gender: 'male',
       age: 21,
     },
-    Amanda: {
+    Ketua: {
       name: 'Amanda Putri Hillary Christy Rumenser',
       hobby: 'Singing',
       gender: 'Female',
@@ -47,7 +47,7 @@ export default function App() {
       <Friendlyyyyy props={state.Friendly} />
       <RyanM props={state.Ryan} />
       <Carlodinoooo props={state.Carlodino} />
-      <Ketua props={state.Amanda}/>
+      <Amanda props={state.Ketua}/>
     </View>
   );
 }
