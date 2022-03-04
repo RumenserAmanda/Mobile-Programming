@@ -4,11 +4,12 @@ import Friendlyyyyy from './components/Friendly';
 import RyanM from './components/Ryan';
 import Carlodinoooo from './components/Carlodino';
 import Amanda from './components/Amanda';
+import Gil from './components/Gilby';
 
 const style = StyleSheet.create({
   View: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -40,6 +41,11 @@ export default function App() {
       age: 19,
       favesubject: 'Data Mining'
     },
+    Gilby: {
+      fName: 'Gilby',
+      lName: 'Koloay',
+      bio: "I like dogs.",
+    }
   });
 
   return (
@@ -48,6 +54,7 @@ export default function App() {
       <RyanM props={state.Ryan} />
       <Carlodinoooo props={state.Carlodino} />
       <Amanda props={state.Ketua}/>
+      <Gil props={state.Gilby} />
     </View>
   );
 }
