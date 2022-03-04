@@ -4,6 +4,7 @@ import Friendlyyyy from './components/Friendly';
 import Gilbeh from './components/Gilbeh';
 import Carlodinoooo from './components/Carlodino';
 import Inces from './components/Inces';
+import Poco from './components/Poco';
 
 const style = StyleSheet.create({
   View: {
@@ -21,6 +22,7 @@ export default function App() {
       <Friendlyyyy />
       <Carlodinoooo />
       <Inces/>
+      <Poco/>
     </View>
   );
 }
