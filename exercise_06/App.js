@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native'
 import Friendlyyyyy from './components/Friendly';
+import RyanM from './components/Ryan';
 
 const style = StyleSheet.create({
   View: {
@@ -17,12 +18,19 @@ export default function App(){
       name: 'Friendly',
       bio: 'I like to think that i could die at any given moment',
       age: 20,
+    },
+    Ryan:{
+      name:'Ryan Mamitoho',
+      bio:'My Favorite Color Is Blue and Black',
+      age: 21,
+      Hobby: 'Playing Game',
     }
   });
 
   return(
     <View>
       <Friendlyyyyy props={state.Friendly} />
+      <RyanM props={state.Ryan} />
     </View>
   )
 }
