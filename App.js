@@ -15,9 +15,19 @@ const style = StyleSheet.create({
 });
 
 export default function App() {
+  const [state] = useState({
+    gilby: {
+      bio: 'i like banana.',
+      age: 21,
+    },
+    nni_p_nama : {
+      bio_ato_apa_kek_terserah: 'dpe isi',
+    }
+  });
+
   return (
     <View>
-      <Gilbeh />
+      <Gilbeh props={state.gilby}/>
       <Friendlyyyy />
       <Carlodinoooo />
       <Inces/>

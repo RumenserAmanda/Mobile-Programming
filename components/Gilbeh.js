@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     }
 });
 
-export default function Gilbeh() {
+export default function Gilbeh({props}) {
     const [state, setState] = useState({
         text: "My name is gilbeeeeeh.",
         textShow: true,
@@ -36,7 +36,7 @@ export default function Gilbeh() {
 
     return(
         <View style={styles.View}>
-            <Text style={styles.Text}>{state.text}</Text>
+            <Text style={styles.Text}>My name is {state.text} and my age is {props.age}. {props.bio}</Text>
             <Button title={(state.textShow) ? 'Hide' : 'Show'} onPress={buttonPress} />
         </View>
     );
