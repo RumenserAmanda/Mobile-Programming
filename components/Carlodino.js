@@ -13,10 +13,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Friendlyyyy() {
+export default function Carlodinoooo() {
   return (
     <View style={styles.View}>
-      <Text style={styles.Text}>Carlodinooo</Text>
+      <Text style={styles.Text}>Carlodinoooo</Text>
     </View>
   );
 }

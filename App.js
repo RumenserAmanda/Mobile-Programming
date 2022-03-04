@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Friendlyyyy from './components/Friendly';
 import Gilbeh from './components/Gilbeh';
+import Carlodinoooo from './components/Carlodino';
 
 const style = StyleSheet.create({
   View: {
@@ -9,14 +10,15 @@ const style = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-  }
+  },
 });
 
 export default function App() {
-  return(
+  return (
     <View>
       <Gilbeh />
       <Friendlyyyy />
+      <Carlodinoooo />
     </View>
   );
 }
