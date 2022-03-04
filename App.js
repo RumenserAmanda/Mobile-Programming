@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Friendlyyyy from './components/Friendly';
 import Gilbeh from './components/Gilbeh';
@@ -22,25 +22,31 @@ export default function App() {
       bio: 'i like banana.',
       age: 21,
     },
-    Friendly : {
+    Friendly: {
       name: 'Friendly',
       bio: 'I like to think that i could die at any moment',
       age: 20,
     },
-    Poco : {
-      name: ' Poco'
+    Poco: {
+      name: ' Poco',
       bio: ' My Favorite color is Blue',
       age: 21,
-    }
+    },
+    Carlodino: {
+      name: 'Carlodino',
+      bio: 'I like playying games',
+      gender: Male,
+      age: 21,
+    },
   });
 
   return (
     <View>
-      <Gilbeh props={state.gilby}/>
+      <Gilbeh props={state.gilby} />
       <Friendlyyyy props={state.Friendly} />
-      <Carlodinoooo />
-      <Inces/>
-      <Poco props={state.Poco}/>
+      <Carlodinoooo props={state.Carlodino} />
+      <Inces />
+      <Poco props={state.Poco} />
     </View>
   );
 }
