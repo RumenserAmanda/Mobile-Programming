@@ -38,6 +38,12 @@ export default function App() {
       gender: Male,
       age: 21,
     },
+    Inces : {
+      name: 'amanda rumenser',
+      bio: 'so difficult but keep enjoy because there is Dewa gil and friend',
+      gender: 'the one and only female here',
+      age: 'still young dumb and broke'
+    }
   });
 
   return (
@@ -45,7 +51,7 @@ export default function App() {
       <Gilbeh props={state.gilby} />
       <Friendlyyyy props={state.Friendly} />
       <Carlodinoooo props={state.Carlodino} />
-      <Inces />
+      <Inces props={state.Inces}/>
       <Poco props={state.Poco} />
     </View>
   );

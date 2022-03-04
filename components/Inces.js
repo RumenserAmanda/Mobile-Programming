@@ -3,7 +3,7 @@ import { StyleSheet, View, Text } from 'react-native';
 
 const styles = StyleSheet.create({
     View: {
-        backgroundColor: 'greenBlue',
+        backgroundColor: 'pink',
         alignItems: 'center',
         margin: 15,
         padding: 5,
@@ -13,10 +13,10 @@ const styles = StyleSheet.create({
     }
 });
 
-export default function Inces() {
+export default function Inces({props}) {
     return(
         <View style={styles.View}>
-            <Text style={styles.Text}>menyerah</Text>
+            <Text style={styles.Text}>My name is {props.name} and i'm  {props.age}. and also my bio for this semester is{props.bio} and {props.gender}</Text>
         </View>
     );
 }
