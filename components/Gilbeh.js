@@ -5,6 +5,8 @@ const styles = StyleSheet.create({
     View: {
         backgroundColor: 'greenyellow',
         alignItems: 'center',
+        margin: 15,
+        padding: 5,
     },
     Text: {
         color: 'black',
