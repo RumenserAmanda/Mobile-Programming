@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, Text, Button } from 'react-native';
 
 const styles = StyleSheet.create({
     View: {
@@ -14,9 +14,30 @@ const styles = StyleSheet.create({
 });
 
 export default function Gilbeh() {
+    const [state, setState] = useState({
+        text: "My name is gilbeeeeeh.",
+        textShow: true,
+    });
+
+    const buttonPress = () => {
+        if(state.textShow) {
+            setState({
+                text: 'hidden.',
+                textShow: false,
+            });
+        }
+        else {
+            setState({
+                text: 'My name is gilbeeeeeh',
+                textShow: true,
+            });
+        }
+    }
+
     return(
         <View style={styles.View}>
-            <Text style={styles.Text}>gilbyyyyy</Text>
+            <Text style={styles.Text}>{state.text}</Text>
+            <Button title={(state.textShow) ? 'Hide' : 'Show'} onPress={buttonPress} />
         </View>
     );
 }
