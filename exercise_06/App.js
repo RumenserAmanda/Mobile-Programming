@@ -3,6 +3,7 @@ import {StyleSheet, View} from 'react-native';
 import Friendlyyyyy from './components/Friendly';
 import RyanM from './components/Ryan';
 import Carlodinoooo from './components/Carlodino';
+import Amanda from './components/Amanda';
 
 const style = StyleSheet.create({
   View: {
@@ -32,13 +33,21 @@ export default function App() {
       gender: 'male',
       age: 21,
     },
+    Amanda: {
+      name: 'Amanda Putri Hillary Christy Rumenser',
+      hobby: 'Singing',
+      gender: 'Female',
+      age: 19,
+      favesubject: 'Data Mining'
+    },
   });
 
   return (
-    <View>
+    <View style={style.View}> 
       <Friendlyyyyy props={state.Friendly} />
       <RyanM props={state.Ryan} />
       <Carlodinoooo props={state.Carlodino} />
+      <Ketua props={state.Amanda}/>
     </View>
   );
 }
