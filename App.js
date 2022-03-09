@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
 });
 
 export default function App() {
+
   const [state, setState] = useState({
     Email: 'default',
     Username: 'default',
@@ -51,7 +52,7 @@ export default function App() {
         placeholderTextColor="grey"
       />
 
-<TextInput 
+      <TextInput 
         style={styles.textInput}
         onChangeText={(val) => setState({
           Email: state.Email,
@@ -62,7 +63,7 @@ export default function App() {
         placeholderTextColor="grey"
       />
 
-<TextInput 
+      <TextInput 
         style={styles.textInput}
         onChangeText={(val) => setState({
           Email: state.Email,
@@ -71,6 +72,7 @@ export default function App() {
         })}
         placeholder="Enter password here"
         placeholderTextColor="grey"
+        secureTextEntry={true}
       />
 
       <Button color="green" title="Button" onPress={() => console.log(state)} />
