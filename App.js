@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
+    textAlign: 'center',
   },
   textInput: {
     borderWidth: 1.5,
@@ -72,7 +73,6 @@ export default function App() {
         })}
         placeholder="Enter password here"
         placeholderTextColor="grey"
-        secureTextEntry={true}
       />
 
       <Button color="green" title="Button" onPress={() => console.log(state)} />
