@@ -1,58 +1,79 @@
-import React, {useState} from 'react';
-import {StyleSheet, View} from 'react-native';
-import Friendlyyyy from './components/Friendly';
-import Gilbeh from './components/Gilbeh';
-import Carlodinoooo from './components/Carlodino';
-import Inces from './components/Inces';
-import Poco from './components/Poco';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
-const style = StyleSheet.create({
-  View: {
+const styles = StyleSheet.create({
+  container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    color: 'white',
+  },
+  textInput: {
+    borderWidth: 1.5,
+    borderColor: 'white',
+    color: 'white',
+    padding: 5,
+    margin: 5,
+    width: 150,
+    height: 25,
+  },
+  button: {
+    color: 'lime',
+  }
 });
 
 export default function App() {
   const [state, setState] = useState({
-    gilby: {
-      name: 'gilby',
-      bio: 'i like banana.',
-      age: 21,
-    },
-    Friendly: {
-      name: 'Friendly',
-      bio: 'I like to think that i could die at any moment',
-      age: 20,
-    },
-    Poco: {
-      name: ' Poco',
-      bio: ' My Favorite color is Blue',
-      age: 21,
-    },
-    Carlodino: {
-      name: 'Carlodino',
-      bio: 'I like playying games',
-      gender: Male,
-      age: 21,
-    },
-    Inces : {
-      name: 'amanda rumenser',
-      bio: 'so difficult but keep enjoy because there is Dewa gil and friend',
-      gender: 'the one and only female here',
-      age: 'still young dumb and broke'
-    }
+    Email: 'default',
+    Username: 'default',
+    Password: 'default',
   });
 
-  return (
-    <View>
-      <Gilbeh props={state.gilby} />
-      <Friendlyyyy props={state.Friendly} />
-      <Carlodinoooo props={state.Carlodino} />
-      <Inces props={state.Inces}/>
-      <Poco props={state.Poco} />
+  return(
+    <View style={styles.container}>
+      <Text style={styles.text}>
+        Email: {`${state.Email} \n\n`}
+        Username: {`${state.Username} \n\n`}
+        Password: {`${state.Password} \n\n`}
+      </Text>
+      
+      <TextInput 
+        style={styles.textInput}
+        onChangeText={(val) => setState({
+          Email: (val !== '') ? val : 'default',
+          Username: state.Username,
+          Password: state.Password,
+        })}
+        placeholder="Enter email here"
+        placeholderTextColor="grey"
+      />
+
+<TextInput 
+        style={styles.textInput}
+        onChangeText={(val) => setState({
+          Email: state.Email,
+          Username: (val !== '') ? val : 'default',
+          Password: state.Password,
+        })}
+        placeholder="Enter username here"
+        placeholderTextColor="grey"
+      />
+
+<TextInput 
+        style={styles.textInput}
+        onChangeText={(val) => setState({
+          Email: state.Email,
+          Username: state.Username,
+          Password: (val !== '') ? val : 'default',
+        })}
+        placeholder="Enter password here"
+        placeholderTextColor="grey"
+      />
+
+      <Button color="green" title="Button" onPress={() => console.log(state)} />
     </View>
   );
 }
