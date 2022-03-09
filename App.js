@@ -1,28 +1,35 @@
-import React from 'react';
-import {StyleSheet, View} from 'react-native';
-import Friendlyyyy from './components/Friendly';
-import Gilbeh from './components/Gilbeh';
-import Carlodinoooo from './components/Carlodino';
-import Inces from './components/Inces';
-import Poco from './components/Poco';
+import React, {useState} from 'react';
+import {StyleSheet, Text, View, TextInput, Button} from 'react-native';
 
-const style = StyleSheet.create({
-  View: {
-    flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+//styling
 
-export default function App() {
-  return (
+export default function App(){
+  const [state, setState] = useState({
+    Email: 'default',
+    Username: 'default',
+    Password: 'default',
+  });
+
+  return(
     <View>
-      <Gilbeh />
-      <Friendlyyyy />
-      <Carlodinoooo />
-      <Inces/>
-      <Poco/>
+      <Text>
+        Email: {`${state.Email} \n\n`}
+        Username: {`${state.Username} \n\n`}
+        Password: {`${state.Password} \n\n`}
+      </Text>
+
+      <TextInput
+      onChangeText={(val) => setState({
+        Email: (val !== '') ? val : 'default',
+        Username: state.Username,
+        Password: state.Password,
+      })}
+      placeholder="Enter email here"
+      placeholderTextColor="grey"
+      />
     </View>
-  );
+  )
+
+
+
 }
