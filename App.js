@@ -67,6 +67,19 @@ export default function App() {
         placeholder="Enter username here"
         placeholderTextColor="grey"
       />
+
+      <TextInput 
+        style={styles.textInput}
+        onChangeText={(val) => setState({
+          Email: state.Email,
+          Username: state.Username,
+          Password: (val !== '') ? val : 'default',
+        })}
+        placeholder="Enter password here"
+        placeholderTextColor="grey"
+        secureTextEntry={true}
+      />
+
       <Button color="green" title="Button" onPress={() => console.log(state)} />
     </View>
   );
