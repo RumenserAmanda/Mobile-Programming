@@ -31,7 +31,6 @@ export default function App() {
       />
 
       <TextInput
-        style={styles.textInput}
         onChangeText={val =>
           setState({
             Email: state.Email,
