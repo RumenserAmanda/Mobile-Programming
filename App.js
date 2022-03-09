@@ -55,7 +55,8 @@ export default function App() {
         placeholderTextColor="grey"
       />
 
-      <TextInput
+      <TextInput 
+      style={styles.textInput}
         onChangeText={val =>
           setState({
             Email: state.Email,
@@ -66,6 +67,7 @@ export default function App() {
         placeholder="Enter username here"
         placeholderTextColor="grey"
       />
+      <Button color="green" title="Button" onPress={() => console.log(state)} />
     </View>
   );
 }
