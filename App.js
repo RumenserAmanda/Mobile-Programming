@@ -3,14 +3,14 @@ import {StyleSheet, Text, View, TextInput, Button} from 'react-native';
 
 //styling
 
-export default function App(){
+export default function App() {
   const [state, setState] = useState({
     Email: 'default',
     Username: 'default',
     Password: 'default',
   });
 
-  return(
+  return (
     <View>
       <Text>
         Email: {`${state.Email} \n\n`}
@@ -19,17 +19,29 @@ export default function App(){
       </Text>
 
       <TextInput
-      onChangeText={(val) => setState({
-        Email: (val !== '') ? val : 'default',
-        Username: state.Username,
-        Password: state.Password,
-      })}
-      placeholder="Enter email here"
-      placeholderTextColor="grey"
+        onChangeText={val =>
+          setState({
+            Email: val !== '' ? val : 'default',
+            Username: state.Username,
+            Password: state.Password,
+          })
+        }
+        placeholder="Enter email here"
+        placeholderTextColor="grey"
+      />
+
+      <TextInput
+        style={styles.textInput}
+        onChangeText={val =>
+          setState({
+            Email: state.Email,
+            Username: val !== '' ? val : 'default',
+            Password: state.Password,
+          })
+        }
+        placeholder="Enter username here"
+        placeholderTextColor="grey"
       />
     </View>
-  )
-
-
-
+  );
 }
