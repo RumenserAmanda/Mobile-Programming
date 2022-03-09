@@ -2,6 +2,30 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View, TextInput, Button} from 'react-native';
 
 //styling
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    color: 'white',
+    textAlign: 'center',
+  },
+  textInput: {
+    borderWidth: 1.5,
+    borderColor: 'white',
+    color: 'white',
+    padding: 5,
+    margin: 5,
+    width: 150,
+    height: 25,
+  },
+  button: {
+    color: 'lime',
+  }
+});
 
 export default function App() {
   const [state, setState] = useState({
@@ -11,14 +35,15 @@ export default function App() {
   });
 
   return (
-    <View>
-      <Text>
+    <View style={styles.container}>
+      <Text style={styles.text}> 
         Email: {`${state.Email} \n\n`}
         Username: {`${state.Username} \n\n`}
         Password: {`${state.Password} \n\n`}
       </Text>
 
       <TextInput
+      style={styles.textInput}
         onChangeText={val =>
           setState({
             Email: val !== '' ? val : 'default',
