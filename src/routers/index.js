@@ -6,8 +6,9 @@ import {
   SplashScreen,
   SignIn,
   SignUp,
+  Home,
 } from '../pages';
-
+import ButtomNavigator from '../components/ButtomNavigator';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -40,6 +41,11 @@ const index = () => {
       <Stack.Screen
         name="SignUp"
         component={SignUp}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="MainMenu"
+        component={MainMenu}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
