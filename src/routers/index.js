@@ -7,6 +7,8 @@ import {
   SignIn,
   SignUp,
   Home,
+  TransactionHand,
+
 } from '../pages';
 import ButtomNavigator from '../components/ButtomNavigator';
 const Stack = createNativeStackNavigator();
@@ -46,6 +48,11 @@ const index = () => {
       <Stack.Screen
         name="MainMenu"
         component={MainMenu}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="TransactionHand"
+        component={TransactionHand}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
