@@ -1,3 +1,4 @@
 import Header from './Header';
+import TabItem from './TabItem';
 
-export {Header};
+export {Header, TabItem};
