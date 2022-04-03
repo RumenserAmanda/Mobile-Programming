@@ -7,6 +7,7 @@ import {
   SignIn,
   SignUp,
   Home,
+  Transaction,
   TransactionHand,
   TransactionBank,
 } from '../pages';
